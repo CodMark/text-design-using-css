@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+    }
+
+    p {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    p .line-1,
+    .line-2 {
+        width: 12rem;
+        height: 7px;
+        position: absolute;
+        top: -4px;
+        background: linear-gradient(269deg, black, #ffffff);
+        border-radius: 20px 0px 0px 20px;
+        animation: linean 1s linear;
+    }
+
+    p .line-1{
+        right: 0;
+    }
+
+    p .line-2 {
+        top: auto;
+        bottom: 7px;
+        transform: rotate(180deg);
+    }
+
+    p span {
+        font-size: 77px;
+        font-family: monospace;
+        font-weight: bold;
+        background: linear-gradient(269deg, black, #ffffff);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: textan 1s linear;
+    }
+
+    p .text-1 {
+        position: relative;
+        left: 6px;
+    }
+
+    p .text-2 {
+        position: relative;
+        left: -2px;
+    }
+
+    p .text-3 {
+        position: relative;
+        left: -9px;
+    }
+
+    p .text-4 {
+        position: relative;
+        left: -14px;
+    }
+
+    @keyframes linean {
+        0%{
+            width: 0rem;
+        }
+        100%{
+            width: 12rem;
+        }
+    }
+    @keyframes textan {
+        0%{
+            width: 0px;
+        }
+        100%{
+            width: 46px;
+        }
+    }
+
+</style>
+
+<body>
+    <p class="text">
+        <span class="line-1"></span>
+        <span class="text-1">T</span>
+        <span class="text-2">E</span>
+        <span class="text-3">X</span>
+        <span class="text-4">T</span>
+        <span class="line-2"></span>
+    </p>
+</body>
+
+</html>
